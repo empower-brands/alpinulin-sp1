@@ -239,6 +239,7 @@ header .payment {
     display: flex;
     flex-direction: column;
     flex: 1;
+    cursor: pointer;
 }
 .product .save {
     background-color: var(--product-bg);
@@ -303,6 +304,11 @@ header .payment {
     width: 100%;
     padding: 7px clamp(0.188rem, 1.532vw - 0.128rem, 1.25rem);
     background-color: var(--primary-lighter);
+}
+.product-border {
+    border-left: 1px solid var(--product-bg);
+    border-right: 1px solid var(--product-bg);
+    border-bottom: 1px solid var(--product-bg);
 }
 .order-now.with-blank-space {
     margin-top: clamp(1.563rem, 1.905vw + 1.098rem, 2.813rem);
