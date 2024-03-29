@@ -827,7 +827,6 @@ footer .logo p {
     list-style: none;
 }
 .footer-accordion-label {
-    cursor: pointer;
     font-size: 21px;
     font-weight: 700;
     line-height: 25px;
@@ -954,6 +953,9 @@ footer .logo p {
     }
     footer .logo p {
         max-width: 28ch;
+    }
+    .footer-accordion-label {
+        cursor: pointer;
     }
 
 }
