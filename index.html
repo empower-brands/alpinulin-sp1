@@ -38,6 +38,10 @@
             bullets[slideIndex].classList.add("active");
         }
 
+
+
+
+
     </script>
 </head>
 <body>
@@ -107,7 +111,7 @@
                     <li>Natürliche Extrakte für eine starke Hautbarriere</li>
                 </ul>
                 <div class="products">
-                    <div class="product">
+                    <div class="product" data-variant="42577206968479">
                         <p class="save">SPARE €0</p>
                         <img src="https://placehold.co/174x133" alt="Probierpackung 20ml">
                         <p class="pack">Probierpackung<br>20ml</p>
@@ -115,7 +119,7 @@
                         <p class="shipping">+ zzgl. €4,50 Versand</p>
                     </div>
 
-                    <div class="product">
+                    <div class="product product-border" data-variant="46997009760601">
                         <p class="save">SPARE €40</p>
                         <img src="https://placehold.co/174x133" alt="Probierpackung 20ml">
                         <p class="pack"><span>3-er-Pack</span><br> Premiumkur 60ml</p>
@@ -124,7 +128,7 @@
                         <p class="popular">AM BELIEBTESTEN</p>
                     </div>
 
-                    <div class="product">
+                    <div class="product" data-variant="46997009793369">
                         <p class="save">SPARE €80</p>
                         <img src="https://placehold.co/174x133" alt="Probierpackung 20ml">
                         <p class="pack"><span>5-er-Pack</span><br> Intensivkur 100ml</p>
@@ -133,10 +137,8 @@
                         <p class="shipping">inkl. kostenloser Versand</p>
                     </div>
                 </div>
-                <a class="order-now with-blank-space" href="#">JETZT SICHER BESTELLEN</a>
+                <a id="order-link" class="order-now with-blank-space" href="https://alpinulin.com/products/soaring-stream?variant=46997009760601">JETZT SICHER BESTELLEN</a>
             </div>
-
-
         </section>
 
         <section class="wrapper">
@@ -854,6 +856,27 @@
         </div>
     </div>
 </footer>
+<script>
+    const products = document.querySelectorAll('.product');
+    const orderLink = document.getElementById('order-link');
 
+    products.forEach(product => {
+        product.addEventListener('click', () => {
+            const variant = product.dataset.variant;
+            orderLink.href = `https://alpinulin.com/products/soaring-stream?variant=${variant}`;
+            updateBorders(product);
+        });
+    });
+
+    function updateBorders(clickedProduct) {
+        products.forEach(product => {
+            if (product === clickedProduct) {
+                product.classList.add('product-border');
+            } else {
+                product.classList.remove('product-border');
+            }
+        });
+    }
+</script>
 </body>
 </html>
