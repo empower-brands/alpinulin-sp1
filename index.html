@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALPINULIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let slideIndex = 0;
+        showSlide(slideIndex);
+
+        function changeSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function prevSlide() {
+
+            showSlide(slideIndex -= 1);
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        function showSlide(n) {
+            let slides = document.getElementsByClassName("main-picture")[0].getElementsByTagName("img");
+            let bullets = document.getElementsByClassName("bullets")[0].getElementsByClassName("bullet");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                bullets[i].classList.remove("active");
+            }
+            slides[slideIndex].style.display = "block";
+            bullets[slideIndex].classList.add("active");
+        }
+
+    </script>
+</head>
+<body>
+<header>
+    <div class="wrapper-wide">
+        <div class="payment">
+            <img src="images/icon-bag.svg" alt="Ratenzahlung mit Klarna & PayPal">
+            <p>Ratenzahlung mit Klarna & PayPal</p>
+        </div>
+    </div>
+    <div class="logo">
+        <div class="wrapper-wide">
+            <img src="images/logo.svg" alt="Logo">
+            <a href="#"><img src="images/icon-shopping-cart.svg" alt="Shopping Cart"></a>
+        </div>
+    </div>
+</header>
+
+
+    <main>
+        <section class="wrapper-wide title">
+            <h1>HYALURON SERUM SOARING STREAM</h1>
+            <p>für straffe Haut</p>
+        </section>
+        <section class="wrapper-wide hero">
+            <div class="carousel">
+                <div class="thumbnails">
+                    <div class="thumbnail" onclick="changeSlide(0)"><img src="images/carousel-thumbnail0.jpeg" alt="Thumbnail"></div>
+                    <div class="thumbnail" onclick="changeSlide(1)"><img src="images/carousel-thumbnail1.jpeg" alt="Thumbnail"></div>
+                    <div class="thumbnail" onclick="changeSlide(2)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
+                    <div class="thumbnail" onclick="changeSlide(3)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
+                    <div class="thumbnail" onclick="changeSlide(4)"><img src="https://placehold.co/85x85" alt="Thumbnail"></div>
+                </div>
+                <div class="main-picture">
+                    <img src="images/carousel-main0.jpeg" alt="Main Picture">
+                    <img src="https://placehold.co/505x505" alt="Main Picture">
+                    <img src="https://placehold.co/505x505" alt="Main Picture">
+                    <img src="https://placehold.co/505x505" alt="Main Picture">
+                    <img src="https://placehold.co/505x505" alt="Main Picture">
+
+                    <div class="bullets">
+                        <span class="bullet active" onclick="changeSlide(0)"></span>
+                        <span class="bullet" onclick="changeSlide(1)"></span>
+                        <span class="bullet" onclick="changeSlide(2)"></span>
+                        <span class="bullet" onclick="changeSlide(3)"></span>
+                        <span class="bullet" onclick="changeSlide(4)"></span>
+                    </div>
+                    <button class="prev" onclick="prevSlide()">&#8963;</button>
+                    <button class="next" onclick="nextSlide()">&#8963;</button>
+                </div>
+            </div>
+
+            <div class="products-general">
+                <h2>HYALURON SERUM SOARING STREAM</h2>
+                <div class="rating">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/star.svg" alt="Star">
+                    <img src="images/half-star.svg" alt="Half Star">
+                    <p class="number-of-reviews">489 Bewertungen</p>
+                </div>
+
+                <ul>
+                    <li>Hoch- und niedermolekulare Hyaluronsäure</li>
+                    <li>Hymagic 4D Komplex für aufgepolsterte Haut von innen</li>
+                    <li>Natürliche Extrakte für eine starke Hautbarriere</li>
+                </ul>
+                <div class="products">
+                    <div class="product">
+                        <p class="save">SPARE €0</p>
+                        <img src="https://placehold.co/174x133" alt="Probierpackung 20ml">
+                        <p class="pack">Probierpackung<br>20ml</p>
+                        <p class="price">€39,90</p>
+                        <p class="shipping">+ zzgl. €4,50 Versand</p>
+                    </div>
+
+                    <div class="product">
+                        <p class="save">SPARE €40</p>
+                        <img src="https://placehold.co/174x133" alt="Probierpackung 20ml">
+                        <p class="pack"><span>3-er-Pack</span><br> Premiumkur 60ml</p>
+                        <p class="price">€79,90<br><span>€119,70</span></p>
+                        <p class="shipping">inkl. kostenloser Versand</p>
+                        <p class="popular">AM BELIEBTESTEN</p>
+                    </div>
+
+                    <div class="product">
+                        <p class="save">SPARE €80</p>
+                        <img src="https://placehold.co/174x133" alt="Probierpackung 20ml">
+                        <p class="pack"><span>5-er-Pack</span><br> Intensivkur 100ml</p>
+                        <p class="price">€119,9<br><span>€199,50</span></p>
+
+                        <p class="shipping">inkl. kostenloser Versand</p>
+                    </div>
+                </div>
+                <a class="order-now with-blank-space" href="#">JETZT SICHER BESTELLEN</a>
+            </div>
+
+
+        </section>
+
+        <section class="wrapper">
+            <div class="skin-benefits">
+                <p><span class="bold">Weniger Falten</span> durch hoch- und niedermolekularen Anteile der Hyaluronsäure, die bis in die tiefen Hautschichten</p>
+                <p><span class="bold">Aufgepolsterte Haut</span> durch den enthaltenen Hymagic 4D Komplex, der in der Haut eine dreidimensionale Struktur bildet, die die Haut von innen aufpolstert –für eine pralle, straffe Haut.</p>
+                <p><span class="bold">Gestärkte Hautbarriere</span> durch die pflanzlichen Extrakte von Alpenrose und Edelweiss. Sie stärken auf natürliche Weise die Hautbarriere gegen äußere Einflüsse, wirken antibakteriell und antioxidativ – für eine weiche und trotzdem robuste Haut.</p>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="alpinulin-with-bottle bg-gray-light">
+                <img src="images/alpinulin-with-bottle.svg" alt="Alpinulin with bottle">
+            </div>
+
+            <a class="order-now" href="#">JETZT SICHER BESTELLEN</a>
+
+            <div class="money-back-guarantee">
+                <img src="images/money-back-guarantee.svg" alt="100 Tage Geld-Zurück-Garantie">
+                <p><span class="bold">100 Tage</span> Geld-Zurück-Garantie</p>
+            </div>
+
+            <div class="customer-testimonials">
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Lorena</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Einfach super!</p>
+                    <p class="text">In Sachen Hautpflegeprodukte habe ich schon einiges hinter mir und nur wenig hat sich in meine Routine eingefunden. Aber bei Soaring Stream hatte ich schon beim ersten Auftragen ein tolles Gefühl auf der Haut und einen sofortigen, frischen und strahlenden Effekt. Habe es direkt in meine tägliche Routine aufgenommen <span class="smiley">🥰</span>
+                    </p>
+                </div>
+
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Tamara</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Angenehm auch bei sensibler Haut</p>
+                    <p class="text">Meine empfindliche Haut profitiert total von den natürlichen Extrakten in Soaring Stream und bekommt zudem reichhaltige Feuchtigkeit. Die Haut fühlt sich schon direkt nach dem Einmassieren ganz weich und zart an und ich habe das Gefühl, sie ist viel resistenter gegen äußere Einflüsse. Ich nutze es gern weiter und hab mir gleich die Vorratspackung bestellt!
+                    </p>
+                </div>
+
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Larissa</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Tschüss Fältchen!</p>
+                    <p class="text">Finde es besonders bemerkenswert, dass sich die Fältchen um meine Augen deutlich zurückziehen und meine Haut insgesamt viel glatter und praller wirkt. <span class="smiley">👍</span> Habe auch schon tolle Komplimente bekommen, ich bilde es mir also nicht ein <span class="smiley">😅</span>
+                    </p>
+                </div>
+
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Corinna</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Viel straffer</p>
+                    <p class="text">Seit ich das Serum benutze ist meine Haut viel straffer geworden, das kann ich sehen, aber auch spüren!!! <span class="smiley">🤩</span> Ganz toll, sie ist viel elastischer und dabei nutze ich es nur einmal am Tag! Klare Empfehlung!!!<span class="smiley">💖</span>
+                    </p>
+                </div>
+
+                <div class="customer-testimonial">
+                    <div class="customer">
+                        <p class="name">Andrea</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/half-star.svg" alt="Half Star">
+                        </div>
+                    </div>
+                    <p class="title">Feuchtigkeit ohne dass es fettet</p>
+                    <p class="text">Meine Haut war schon immer recht trocken und hat hochwertige Pflege gebraucht, allerdings bin ich an vielen Produkten gescheitert weil sie immer gleich zu stark gefettet haben und meine Haut eigentlich eher Feuchtigkeit brauchte. Soaring Stream ist da optimal, weil es ganz viel Feuchtigkeit in der Haut speichert, das merke ich richtig. Und meine Haut ist endlich nicht mehr so trocken und schuppig!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <img class="customers-image" src="images/customers.png" alt="Customers">
+        </section>
+
+        <section class="wrapper">
+            <div class="alpinulin-with-bottle wide-logo">
+                <img src="images/alpinulin-with-bottle.svg" alt="Alpinulin with bottle">
+            </div>
+            <p class="skin-care-headline">
+                Wie du deine glatte und strahlende Haut zurück bekommst – in wenigen Wochen und ohne Aufwand, Behandlungen mit Nebenwirkungen oder Eingriffe in deine Lebensweise…</p>
+            <p class="skin-care-headline">
+                Deine besten Jahre liegen vor dir – nicht hinter dir!
+                </p>
+            <p class="skin-care-headline last">
+                Auch wenn die Zeit Spuren an der Haut hinterlässt, sei es durch die normale Hautalterung oder durch äußere Einflüsse.
+            </p>
+
+            <div class="skin-care-info">
+                <p>SOARING STREAM enthält eine optimale Konzentration der hochwertigen Wirkstoffe Hyaluronsäure und Hymagic 4D, ergänzt durch natürliche Pflanzenextrakte von Edelweiss und Alpenrose.</p>
+                <p>Diese Kombination ist einzigartig und hat einen feuchtigkeitsspendenden, glättenden und aufpolsternden Effekt auf die Haut. Die natürlichen Extrakte pflegen zudem sanft – für eine strahlende und gesunde Haut.</p>
+                <p>Der Grund, warum diese Kombination so gut funktioniert, ist, dass die Wirkstoffe an der Wurzel, also tief in der Haut ansetzen, um diese von innen heraus zu glätten.</p>
+                <p>Diese Kombination an hochwertigen Zutaten haben wir für dich zusammengestellt, um deiner Haut eine optimale Pflege zu bieten.</p>
+            </div>
+        </section>
+        <section class="wrapper">
+            <div class="social-media-posts">
+                <h2>Social Media Beiträge echter Kundinnen</h2>
+                <p>Diese Bildschirmfotos und Bilder haben wir nach Rücksprache aus Facebook-Gruppen gesammelt</p>
+
+                <div class="customer-reviews">
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Sarna</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-sarna.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Habe schon das zweite Fläschchen angefangen… das erste hat allerdings wirklich lange gehalten, weil man recht wenig davon benötigt um ein tolles gepflegtes Ergebnis auf der Haut zu sehen. Ich habe dieses Serum schon meiner besten Freundin zum Geburtstag geschenkt und sie ist auch ganz hin und weg von der tollen Feuchtigkeitspflege! <span class="smiley">🥰💧</span>
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Christa</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-christa.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Ich liebe dieses Serum!!! Hab das zweite Fläschchen schon fast leer und will nicht mehr ohne dieses Serum sein! Meine Haut ist viel elastischer und strahlt so richtig! DANKE für dieses super Produkt!!!
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Collien</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-no-picture.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Hallo ihr Lieben, ich habe jetzt das zweite Fläschchen begonnen und meine Haut freut sich förmlich täglich auf diese super Erfrischung! Ich kann auch wirklich Resultate sehen, meine Falten um die Augen und vor allem auch um den Mund sind schon viel weniger geworden. Und dieses pralle Gefühl will ich nicht mehr missen!! Danke!! <span class="smiley">😍</span>
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Anja</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-anja.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Ich bin super happy mit diesem Serum, meine Haut hat in den letzten Monaten gefühlt einen richtigen Alterungsschub bekommen, ich habe täglich neue Falten entdeckt und war ganz überrascht, wie die Haut plötzlich schlaffer wird, dabei bin ich erst 32. Soaring Stream hat da einen tollen Dienst geleistet und mir meine Jugendlichkeit zurück gegeben, ich bin richtig erleichtert!
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Kim</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-kim.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Hey ihr! Ich wollte kurz teilen, wie glücklich ich mit dem Serum bin, ich hab jetzt schon fast zwei Fläschchen leer und meine Haut ist im Vergleich zu vorher nicht wiederzuerkennen! Sie ist viel glatter und strahlender! Ich bleibe dran!
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Caroline</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-no-picture.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Einfach klasse, wie das Serum die Feuchtigkeit in meiner Haut speichert! Das ist ein ganz neues Gefühl, dabei bin ich noch an der ersten Flasche. Bin gespannt, was sich in den kommenden Wochen noch so tut. <span class="smiley">👍</span>
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Petra</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-petra.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Hi ich benutze das Serum jetzt seit ca. 4 Wochen und kann schon einen tollen Unterschied sehen. Davor war meine Haut oft uneben und trocken und daher wirkte sie schnell matt und fahl. Jetzt hat sie einen richtigen Glow und fühlt sich ganz sanft an. Ich bin begeistert!
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Linn</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-no-picture.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Ich habe mit dem Serum angefangen weil ich etwas mit natürlichen Extrakten haben wollte und da hat mich das mit den Pflanzen aus den Alpen besonders angesprochen. Der zarte Duft ist echt angenehm und auch die Wirkung finde ich gut: meine Haut fühlt sich viel glatter und praller an. Top!!
+                        </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Jana</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-jana.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Ein klasse Produkt, hatte davor oft Probleme mit allergischen Reaktionen, aber die pflanzlichen Extrakte sind ganz sanft und das Hyaluron spendet toll viel Feuchtigkeit, habe gerade die nächste Packung bestellt, dieses Mal gleich 5 Fläschchen, damit ich genug Vorrat habe <span class="smiley">😅</span> </p>
+                    </div>
+
+                    <div class="customer-review">
+                        <div class="name-verified">
+                            <p>Pauline</p>
+                            <div class="verified">
+                                <img src="images/verified-buyer.svg" alt="Verified Buyer">
+                                <p>Verified Buyer</p>
+                            </div>
+                        </div>
+                        <div class="customer-rating border-top border-bottom">
+                            <div class="image-rating">
+                                <img src="images/customer-no-picture.jpeg" alt="">
+                                <div class="rating-and-for">
+                                    <p>Hyaluron serum soaring steam</p>
+                                    <div class="rating">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                        <img src="images/star.svg" alt="Star">
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="recommends"><img src="images/thumbs-up.svg" alt=""> Empfiehlt dieses Produkt</p>
+                        </div>
+                        <p class="text">
+                            Nutze das Serum schon länger und mittlerweile nutzen es auch meine Schwester und meine Mutter, wir bestellen immer die große Vorratspackung für uns 3 <span class="smiley">😁</span> Wir sind quasi der Beweis, dass es sowohl für junge Frauen wie meine Schwester und mich, als auch für meine Mutter funktioniert. Wir lieben die Frische und die strahlende Haut <span class="smiley">👍</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="ingredients">
+                <h2>Was steckt hinter den Inhaltsstoffen von SOARING STREAM?</h2>
+                <div>
+                    <h3>Hyaluronsäure</h3>
+                    <p>Die menschliche Haut produziert eigenständig Hyaluron, diese Produktion nimmt aber mit zunehmendem Alter ab. Soll die Haut weiter frisch und elastisch sein, muss sie von außen zugeführt werden. Während hochmolekare Hyaluronsäure lediglich auf der Hautoberfläche bleibt und sich durch Schwitzen und mechanische Reize dort nicht lange hält, zieht niedermolekulare Hyaluronsäure in die tieferen Hautschichten ein. Dort bindet sie Wasser und hält die Haut befeuchtet. Die Hautzellen werden regelrecht mit wertvollem Bergquellwasser aufgefüllt, was das äußere Erscheinungsbild straffer und praller erscheinen lässt.</p>
+                </div>
+                <div>
+                    <h3>Hymagic 4D</h3>
+                    <p>Hymagic™ 4D ist eine Kombination aus vier Arten von Wasserstoff und kann ein dreidimensionales Netzwerk aufbauen bilden, mit dem es die verschiedenen Hautschichten genau anvisieren kann. So wird Feuchtigkeit von außen zugeführt und gleichzeitig von innen gespeichert. Auf diese Weise wird die Haut vollständig mit Feuchtigkeit versorgt, nachhaltig hydratisiert und ihre Elastizität direkt von innen verbessert.</p>
+                </div>
+                <div>
+                    <h3>Alpenrose</h3>
+                    <p>Die pflanzlichen Stammzellen der Alpenrose stärken nicht nur nachweislich die natürliche Hautbarriere und machen sie somit widerstandsfähiger gegen äußere Einflüsse, sondern verleihen unserer Hautpflege auch einen angenehmen natürlichen Geruch.</p>
+                </div>
+                <div>
+                    <h3>Edelweiss</h3>
+                    <p>Die Königin der Alpenblumen wächst üblicherweise auf 3.000 Metern Höhe, wo sie der Sonne, Wind, Schnee und kargem Boden trotzt. Das unter Naturschutz stehende Juwel wird für unsere Hautpflege gezüchtet und verfügt über antibakterielle, antiseptische und antioxidative Wirkung.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="alpinulin-with-bottle wide-logo">
+                <img src="images/alpinulin-with-bottle.svg" alt="Alpinulin with bottle">
+            </div>
+            <a class="order-now" href="#">JETZT SICHER BESTELLEN</a>
+        </section>
+
+        <section class="wrapper">
+            <h2 class="testimonials-title">Testimonials</h2>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Ann-Kathrin</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Wirklich toll</p>
+                    <p class="testimonial-long">Seit ich Soaring Stream nutze, sind meine Hautprobleme wie verpufft. Meine Haut war oft trocken und schlaff, jetzt ist sie richtig prall und strahlt sogar, ohne zu fetten! Ich liebe den Effekt! Hab mich wortwörtlich lange nicht so wohl in meiner Haut gefühlt!</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Nadine</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Aufpolsternder Effekt</p>
+                    <p class="testimonial-long">Soaring Stream ist ein echter Gamechanger für meine Hautpflege, es ist wirklich überraschend wie schnell man den aufgepolsterten Effekt wahrnehmen kann und dabei fühlt sich die Haut einfach angenehm geschmeidig an. Ich bin super happy!!</p>
+                </div>
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Yvette</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Einfach WOW</p>
+                    <p class="testimonial-long">Super Serum! Habe es auf Empfehlung meiner Freundin gekauft und es nicht bereut: Ich nutze bereits die zweite Flasche und will es nicht mehr hergeben!! Ganz klasse, wie das die Haut glatter macht, ich dachte nicht dass meine Fältchen nochmal weniger werden.. Jetzt bin ich vom Gegenteil überzeugt und auch der tolle Glow ist ein echtes Highlight!</p>
+                </div>
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Leyla</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Super Feuchtigkeit</p>
+                    <p class="testimonial-long">Ich bin zwar erst 22 aber meine Haut ist mir sehr wichtig und Soaring Stream ist auf jeden Fall auch was für meine jüngere Haut, ich will gern den Falten ein wenig vorbeugen so gut es geht. Auch wenn ich noch nicht so viele habe, ist meine Haut total verändert. Sie ist viel strahlender und fühlt sich ganz toll an! Klare Weiterempfehlung!</p>
+                </div>
+                <div class="testimonial">
+                    <div class="person-rating">
+                        <p>Nicola</p>
+                        <div class="rating">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                            <img src="images/star.svg" alt="Star">
+                        </div>
+                    </div>
+                    <p class="testimonial-short">Gut bei fahler Haut</p>
+                    <p class="testimonial-long">Ich habe mich ziemlich geärgert, dass meine Haut in den letzten Monaten so matt geworden ist und irgendwie hängend aussah. Hab viel probiert, aber Soaring Stream war das einzige, was mich wirklich vorangebracht hat! Mein Mann hat sogar schon gefragt, was ich anders mache <span class="smiley">😅</span> wenn es sogar ihm auffällt.. Ich liebe dieses frische und pralle Gefühl! Ich gehe mittlerweile sogar wieder ungeschminkt aus dem Haus, weil ich viel frischer aussehe und mich damit wohlfühle!! Danke!!</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <img src="images/customers2.png" alt="Customers">
+        </section>
+
+        <section class="wrapper">
+            <h2 class="comparisons-title">Alpinulin Hyaluron Serum im Vergleich zu anderen Hyaluron Seren</h2>
+            <div class="comparisons">
+                <div class="comparison">
+                    <img src="images/alpinulin-bottles.svg" alt="">
+                    <h3 class="name"><span>Alpinulin</span><br> SOARING STREAM</h3>
+                    <div class="highlighted-feature">
+                        <div class="feature bg-gray-lightest">
+                            <img src="images/circle-green.svg" alt="">
+                            <p>3,12% hochwertige Hyaluronsäure inkl. Hymagic 4D Komplex</p>
+                        </div>
+                        <div class="feature">
+                            <img src="images/circle-green.svg" alt="">
+                            <p>Feinste Moleküle dringen bis in die tiefste Hautschicht ein</p>
+                        </div>
+                        <div class="feature bg-gray-lightest">
+                            <img src="images/circle-green.svg" alt="">
+                            <p>Ohne Zusatzstoffe für eine super Verträglichkeit</p>
+                        </div>
+                        <div class="feature">
+                            <img src="images/circle-green.svg" alt="">
+                            <p>Mit Hymagic 4D Komplex. Der die Haut von innen dreidimensional aufpolstert</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison">
+                    <img src="images/other-bottles.svg" alt="">
+                    <h3 class="name"><span>ANDERE</span><br> Hyaluron Seren</h3>
+                    <div class="highlighted-feature">
+                        <div class="feature bg-gray-lightest">
+                            <img src="images/circle-red.svg" alt="">
+                            <p>Durchschnittlich nur 1-2% Hyaluronsäure<br><br></p></div>
+                        <div class="feature">
+                            <img src="images/circle-red.svg" alt="">
+                            <p>Oft zu große Moleküle, sodass die Wirkstoffe nicht richtig in die Haut eindringen können</p>
+                        </div>
+                        <div class="feature bg-gray-lightest">
+                            <img src="images/circle-red.svg" alt="">
+                            <p>Mit Zusatzstoffen, die der Haut und Umwelt schaden</p>
+                        </div>
+                        <div class="feature">
+                            <img src="images/circle-red.svg" alt="">
+                            <p>Häufig nur Hyaluronsäure als Power-Stoff</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="thirty-days">
+                <img src="images/30-days.svg" alt="">
+                <h2>Geld-zurück-Garantie</h2>
+                <p>Jetzt risikofrei testen:<br>
+                    <span>30 TAGE GELD-ZURÜCK-GARANTIE</span><br><br>
+                    Du erhältst eine 30 Tage Geld zurück Garantie auf eine Packung SOARING STREAM Serum. Klicke hier und erfahre mehr darüber!
+                </p>
+            </div>
+            <a class="order-now" href="#">JETZT SICHER BESTELLEN</a>
+        </section>
+
+
+        <section class="wrapper">
+            <h2 class="faq-title">Häufig gestellte Fragen</h2>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq1" class="accordion-checkbox">
+                <label for="faq1" class="accordion-label">Was genau ist Hyaluronsäure?</label>
+                <div class="accordion-content">
+                    <p>aaa</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq2" class="accordion-checkbox">
+                <label for="faq2" class="accordion-label">Warum sollte ich das Hyaluron von Alpinulin nehmen und kein anderes?</label>
+                <div class="accordion-content">
+                    <p>aaa</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq3" class="accordion-checkbox">
+                <label for="faq3" class="accordion-label">Bringt es noch etwas, wenn ich schon älter bin (60+)?</label>
+                <div class="accordion-content">
+                    <p>aaa</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq4" class="accordion-checkbox">
+                <label for="faq4" class="accordion-label">Für welche Altersgruppe ist das Serum geeignet?</label>
+                <div class="accordion-content">
+                    <p>aaa</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <input type="checkbox" id="faq5" class="accordion-checkbox">
+                <label for="faq5" class="accordion-label">Reicht eine einmalige Kur für langfristige Resultate?</label>
+                <div class="accordion-content">
+                    <p>aaa</p>
+                </div>
+            </div>
+
+
+            <div class="accordion">
+                <input type="checkbox" id="faq6" class="accordion-checkbox">
+                <label for="faq6" class="accordion-label">Wie lange muss ich das Serum anwenden, um erste Ergebnisse zu sehen?</label>
+                <div class="accordion-content">
+                    <p>Viele Bewertungen und Erfahrungsberichte zeigen bereits nach wenigen Anwendungen sichtbare Veränderungen. Jedoch empfehlen wir eine Anwendungsdauer von mindestens 3 Monaten, um die Ergebnisse richtig beurteilen zu können. Unser Tipp: Dokumentiere deine Hautveränderungen durch regelmäßige Fotos für einen besseren Vergleich.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="sources">
+            <section class="wrapper">
+                <h2>Quellen:</h2>
+                <p>Something</p>
+
+            </section>
+        </div>
+
+    </main>
+
+
+<footer>
+    <div class="wrapper-wide">
+        <div class="footer-container">
+            <div class="logo">
+                <img src="images/logo-white.svg" alt="Logo">
+                <p>Lorem ipsum dolor sit amet consectetur. Donec lectus lorem consequat eros scelerisque purus. A vestibulum magna facilisi vestibulum rhoncus nibh nunc amet. Morbi rutrum eu vel nisl faucibus. Gravida mi facilisis tellus malesuada ridiculus.</p>
+            </div>
+            <input type="checkbox" id="toggle-products" class="footer-accordion-toggle">
+            <div class="footer-products">
+                <label for="toggle-products" class="footer-accordion-label">Unsere Produkte</label>
+                <ul>
+                    <li><a href="#">ALPINE AIR</a></li>
+                    <li><a href="#">GLACIAL GLOW</a></li>
+                    <li><a href="#">MIDNIGHT MOISTURE</a></li>
+                    <li><a href="#">MOUNTAIN MIST</a></li>
+                    <li><a href="#">NATURAL NOURISHMENT</a></li>
+                    <li><a href="#">PURIFYING PEAK</a></li>
+                    <li><a href="#">SOARING STREAM</a></li>
+                </ul>
+            </div>
+            <input type="checkbox" id="toggle-help" class="footer-accordion-toggle">
+            <div class="footer-help">
+                <label for="toggle-help" class="footer-accordion-label">Noch Fragen?</label>
+                <ul>
+                    <li><a href="#">Hilfe & Kontakt</a></li>
+                    <li><a href="#">Zahlung & Versand</a></li>
+                    <li><a href="#">AGB</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Widerrufsrecht</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy;Copyright 2024 by ALPINULIN. All Rights Reserved.</p>
+            <div>
+                <img src="images/icon-gpay.svg" alt="Google Pay">
+                <img src="images/icon-apple-pay.svg" alt="Apple Pay">
+                <img src="images/icon-paypal.svg" alt="PayPal">
+                <img src="images/icon-visa.svg" alt="Visa Card">
+                <img src="images/icon-amex.svg" alt="Amex">
+                <img src="images/icon-master-card.svg" alt="Master Card">
+                <img src="images/icon-maestro.svg" alt="Maestro Card">
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
