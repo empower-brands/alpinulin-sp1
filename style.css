@@ -36,8 +36,8 @@ img {
     --border-color: hsla(0, 0%, 89%, 1); /* Light gray */
 
     /* bullets */
-    --bullet-color: hsla(0, 0%, 94%, 1); /* Light gray */
-    --bullet-active-color: hsla(116, 17%, 66%, 1); /* Light green */
+    --bullet-color: hsla(32, 22%, 86%, 1); /* Light gray */
+    --bullet-active-color: hsla(0, 0%, 0%, 1); /* Black */
 }
 
 body {
