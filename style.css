@@ -409,6 +409,16 @@ header .payment {
 }
 
 /*video carousel */
+.swiper-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: center;
+
+    margin-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
 .swiper-container {
     overflow: hidden;
     position: relative;
