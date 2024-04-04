@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALPINULIN</title>
+    <title>Alpinulin Super Hyaluronic Acid Serum – ALPINULIN</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <script>
         let slideIndex = 0;
@@ -241,8 +242,24 @@
             </div>
         </section>
 
-        <section class="wrapper">
-            <img class="customers-image" src="images/customers.png" alt="Customers">
+        <section class="wrapper no-left-right-padding">
+<!--            <img class="customers-image" src="images/customers.png" alt="Customers">-->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="video-item" style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/930366313?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Anna"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+                    <div class="swiper-slide"><div class="video-item" style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/930361919?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Cara"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+                    <div class="swiper-slide"><div class="video-item" style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/930366232?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Andrea"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+                    <div class="swiper-slide"><div class="video-item" style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/930366393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Chasna"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+                    <div class="swiper-slide"><div class="video-item" style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/930366486?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Julia"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+                    <div class="swiper-slide"><div class="video-item" style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/930366573?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Kristin"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+                    <div class="swiper-slide"><div class="video-item" style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/930366638?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Laura Nikulla"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+                    <div class="swiper-slide"><div class="video-item" style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/930366813?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Laura"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </section>
 
         <section class="wrapper">
@@ -876,6 +893,7 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     const products = document.querySelectorAll('.product');
     const orderLink = document.getElementById('order-link');
@@ -897,6 +915,38 @@
             }
         });
     }
+
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 20,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3,
+                spaceBetween: 16
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 16
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
 </script>
 </body>
 </html>

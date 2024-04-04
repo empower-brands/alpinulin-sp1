@@ -408,6 +408,34 @@ header .payment {
     color: var(--black-lighter);
 }
 
+/*video carousel */
+.swiper-container {
+    overflow: hidden;
+    position: relative;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    padding: 20px;
+    font-size: 16px;
+    color: var(--black);
+    background-color: hsla(0, 0%, 100%, 0.25);
+}
+.swiper-button-prev {
+    left: -5px;
+}
+.swiper-button-next {
+    right: -5px;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-item {
+    width: 180px;
+    height: auto;
+}
+
 /* customers image */
 .customers-image {
     padding-top: clamp(0rem, 2.095vw - 0.511rem, 1.375rem);
@@ -991,13 +1019,22 @@ footer .logo p {
         flex-direction: column-reverse;
         margin-bottom: 47px;
     }
-
 }
 
 @media (max-width: 600px) {
 
     .thumbnails {
         display: none;
+    }
+    .no-left-right-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .swiper-button-prev {
+        left: 0;
+    }
+    .swiper-button-next {
+        right: 0;
     }
 }
 
