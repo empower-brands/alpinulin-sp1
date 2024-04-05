@@ -442,8 +442,17 @@ header .payment {
     align-items: center;
 }
 .video-item {
-    width: 180px;
+    width: 200px;
     height: auto;
+}
+.video-item-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-align: center;
+
+    margin-top: 27px;
 }
 
 /* customers image */
