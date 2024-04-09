@@ -134,7 +134,9 @@ header .payment {
 .mySwiperImages2 img {
     width: 505px;
 }
-
+.mySwiperImages .swiper-slide {
+    cursor: pointer;
+}
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: var(--bullet-active-color);
     transition: background-color 0.5s ease;
