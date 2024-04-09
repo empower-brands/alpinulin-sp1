@@ -66,30 +66,108 @@
         </section>
         <section class="wrapper-wide hero">
             <div class="carousel">
-                <div class="thumbnails">
-                    <div class="thumbnail" onclick="changeSlide(0)"><img src="images/carousel-main0.jpeg" alt="Thumbnail"></div>
-                    <div class="thumbnail" onclick="changeSlide(1)"><img src="images/carousel-main1.jpeg" alt="Thumbnail"></div>
-                    <div class="thumbnail" onclick="changeSlide(2)"><img src="images/carousel-main2.jpeg" alt="Thumbnail"></div>
-                    <div class="thumbnail" onclick="changeSlide(3)"><img src="images/carousel-main3.jpeg" alt="Thumbnail"></div>
-                    <div class="thumbnail" onclick="changeSlide(4)"><img src="images/carousel-main4.jpeg" alt="Thumbnail"></div>
-                </div>
-                <div class="main-picture">
-                    <img src="images/carousel-main0.jpeg" alt="Picture">
-                    <img src="images/carousel-main1.jpeg" alt="Picture">
-                    <img src="images/carousel-main2.jpeg" alt="Picture">
-                    <img src="images/carousel-main3.jpeg" alt="Picture">
-                    <img src="images/carousel-main4.jpeg" alt="Picture">
-
-                    <div class="bullets">
-                        <span class="bullet active" onclick="changeSlide(0)"></span>
-                        <span class="bullet" onclick="changeSlide(1)"></span>
-                        <span class="bullet" onclick="changeSlide(2)"></span>
-                        <span class="bullet" onclick="changeSlide(3)"></span>
-                        <span class="bullet" onclick="changeSlide(4)"></span>
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiperImages2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main0.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main1.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main2.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main3.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main4.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main5.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main6.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main7.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main8.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main9.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main10.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main11.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main12.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main13.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main14.jpeg" />
+                        </div>
                     </div>
-                    <button class="prev" onclick="prevSlide()">&#8963;</button>
-                    <button class="next" onclick="nextSlide()">&#8963;</button>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
+                <div thumbsSlider="" class="swiper mySwiperImages">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main0.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main1.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main2.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main3.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main4.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main5.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main6.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main7.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main8.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main9.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main10.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main11.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main12.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main13.jpeg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/carousel-main14.jpeg" />
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="products-general">
@@ -919,7 +997,7 @@
         });
     }
 
-    const swiper = new Swiper('.swiper-container', {
+    const swiperVideos = new Swiper('.swiper-container', {
         loop: true,
         slidesPerView: 4,
         spaceBetween: 20,
@@ -947,6 +1025,25 @@
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+    });
+
+    var swiper = new Swiper(".mySwiperImages", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiperImages2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
         },
     });
 
